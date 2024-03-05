@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Sidbar() {
   return (
     <div>
@@ -16,10 +16,10 @@ function Sidbar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <Link to={"/allbook"}>
               <i className="bx bxs-shopping-bag-alt" />
-              <span className="text">My Store</span>
-            </a>
+              <span className="text">All-Book-User</span>
+            </Link>
           </li>
           <li>
             <a href="#">
