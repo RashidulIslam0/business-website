@@ -1,0 +1,25 @@
+.countss {
+  padding: 10px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 30px; */
+}
+
+.count {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  /* border: 1px solid gray; */
+  box-shadow: 7px 7px 9px 9px rgb(218, 208, 208);
+}
+
+.count hr {
+  color: #94959b;
+}
+.count h5 {
+  font-size: 36px;
+  font-weight: 900;
+  color: rgb(0, 74, 173);
+}
+.count p {
+  color: #94959b;
+}
