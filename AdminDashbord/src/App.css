@@ -291,8 +291,7 @@ body {
 }
 /* NAVBAR */
 
-/* MAIN */
-#content main {
+MAIN #content main {
   width: 100%;
   padding: 36px 24px;
   font-family: var(--poppins);
@@ -492,8 +491,6 @@ body {
 #content main .table-data .todo .todo-list li:last-child {
   margin-bottom: 0;
 }
-/* MAIN */
-/* CONTENT */
 
 @media screen and (max-width: 768px) {
   #sidebar {

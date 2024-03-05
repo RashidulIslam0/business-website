@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+// import "./AllBook.css";
 function AllBook() {
   const [bookings, setBookings] = useState([]);
 
@@ -16,18 +16,8 @@ function AllBook() {
   }, []);
   return (
     <div>
-      <main>
-        <div className="head-title">
-          <div className="left">
-            <h1>Dashboard</h1>
-          </div>
-          <a href="#" className="btn-download">
-            <i className="bx bxs-cloud-download" />
-            <span className="text">Download PDF</span>
-          </a>
-        </div>
-
-        <div className="table-data">
+      <main className="mt-5">
+        <div className="table-data pt-5">
           <div className="order">
             <div className="head">
               <h3>Recent Orders</h3>
@@ -47,17 +37,6 @@ function AllBook() {
                 </tr>
               </thead>
               <tbody>
-                {/* <tr>
-                  <td>
-                    <p>John Doe</p>
-                  </td>
-                  <td>01723854890</td>
-                  <td>rashidul@gmail.com</td>
-                  <td>12-2-24</td>
-                  <td>7:30</td>
-                  <td>8:00</td>
-                </tr> */}
-
                 {bookings.map((booking) => (
                   <tr key={booking._id}>
                     <td>{booking.name}</td>
