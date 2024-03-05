@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import "./AllBook.css";
+
 function AllBook() {
   const [bookings, setBookings] = useState([]);
 
@@ -16,16 +16,26 @@ function AllBook() {
   }, []);
   return (
     <div>
-      <main className="mt-5">
-        <div className="table-data pt-5">
+      <main>
+        <div className="head-title">
+          <div className="left">
+            <h1>Dashboard</h1>
+          </div>
+          <a href="#" className="btn-download">
+            <i className="bx bxs-cloud-download" />
+            <span className="text">Download PDF</span>
+          </a>
+        </div>
+
+        <div className="table-data">
           <div className="order">
             <div className="head">
-              <h3>Recent Orders</h3>
+              <h3>Recent User</h3>
               <i className="bx bx-search" />
               <i className="bx bx-filter" />
             </div>
             <table>
-              <thead>
+              <thead className="">
                 <tr>
                   <th>User Name</th>
                   <th>Phone Number</th>
