@@ -22,7 +22,7 @@ function Sidbar() {
               <span className="text">All Book</span>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <a href="#">
               <i className="bx bxs-doughnut-chart" />
               <span className="text">Analytics</span>
@@ -39,7 +39,7 @@ function Sidbar() {
               <i className="bx bxs-group" />
               <span className="text">Team</span>
             </a>
-          </li>
+          </li> */}
         </ul>
         <ul className="side-menu">
           <li>
