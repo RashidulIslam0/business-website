@@ -5,6 +5,9 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidbar";
 import Home from "./Pages/Home";
 import AllBook from "./Pages/AllBook";
+import Video from "./Pages/Video/Video";
+import Edit from "./Pages/Video/Edit";
+// import Editevideo from "./Pages/Video/Edit";
 // import About from "./Pages/About";
 // import Contact from "./Pages";
 
@@ -18,6 +21,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allbook" element={<AllBook />} />
+            <Route path="/video" element={<Video />} />
+            <Route path="/edit" element={<Edit />} />
+
+            {/* <Route path="/edit" element={<Editevideo />} /> */}
           </Routes>
         </section>
       </Router>
