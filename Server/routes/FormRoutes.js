@@ -1,13 +1,12 @@
-// routes/bookRoutes.js
 const express = require('express');
 const router = express.Router();
-const Book = require('../models/BookModels');
+const Form = require('../models/FormModels');
 
-// GET all books
+// GET all forms
 router.get('/', async (req, res) => {
   try {
-    const books = await Book.find();
-    res.json(books);
+    const forms = await Form.find();
+    res.json(forms);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -15,12 +14,12 @@ router.get('/', async (req, res) => {
 
 
 
-// CREATE a new book
+// CREATE a new forms
 router.post('/', async (req, res) => {
-    const book = new Book(req.body);
+    const form = new Form(req.body);
     try {
-      const savedBook = await book.save();
-      res.status(201).json(savedBook);
+      const savedForm = await form.save();
+      res.status(201).json(savedForm);
     } catch (error) {
       res.status(400).json({ message: error.message });
     }

@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import "./hero.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 function Hero(props) {
   const [name, setName] = useState("");
-  const [countryCode, setCountryCode] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhoneNumber] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form submitted with:", { name, countryCode, phoneNumber });
+
+    try {
+      const response = await axios.post("http://localhost:3000/api/v1/form", {
+        name,
+        email,
+        phone,
+      });
+      console.log("Server response:", response.data);
+      toast.success("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Error submitting form. Please try again later.");
+    }
+
+    console.log("Form submitted with:", { name, email, phone });
   };
 
   return (
@@ -52,19 +68,6 @@ function Hero(props) {
                     />
                   </div>
                   <div className="">
-                    <label htmlFor="countryCode" className="form-label">
-                      Country code
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="countryCode"
-                      placeholder="Enter Country code"
-                      value={countryCode}
-                      onChange={(e) => setCountryCode(e.target.value)}
-                    />
-                  </div>
-                  <div className="">
                     <label htmlFor="phoneNumber" className="form-label">
                       Phone number
                     </label>
@@ -73,8 +76,21 @@ function Hero(props) {
                       className="form-control"
                       id="phoneNumber"
                       placeholder="Enter Phone number"
-                      value={phoneNumber}
+                      value={phone}
                       onChange={(e) => setPhoneNumber(e.target.value)}
+                    />
+                  </div>
+                  <div className="">
+                    <label htmlFor="countryCode" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="countryCode"
+                      placeholder="Enter Country code"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 

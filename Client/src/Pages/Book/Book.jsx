@@ -35,10 +35,10 @@ function Book() {
         formData
       );
       console.log("Book created:", response.data);
-      // Show toast notification upon successful form submission
+
       toast.success("Appointment booked successfully!", {
         position: "top-right",
-        autoClose: 3000, // Close the toast after 3 seconds
+        autoClose: 3000,
         hideProgressBar: false,
       });
       // Reset the form
@@ -131,21 +131,6 @@ function Book() {
                     />
                   </div>
                   <div className="flex flex-wrap formbold--mx-3">
-                    {/* <div className="w-full sm:w-half formbold-px-3">
-                      <div className="formbold-mb-5 w-full">
-                        <label htmlFor="date" className="formbold-form-label">
-                          Date
-                        </label>
-                        <input
-                          type="date"
-                          name="date"
-                          id="date"
-                          className="formbold-form-input"
-                          value={formData.date}
-                          onChange={handleInputChange}
-                        />
-                      </div>
-                    </div> */}
                     <div className="w-full sm:w-half formbold-px-3">
                       <div className="formbold-mb-5">
                         <label htmlFor="time" className="formbold-form-label">

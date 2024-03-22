@@ -7,6 +7,7 @@ import MoonIcon from "./assets/icons/moon.svg";
 import SunIcon from "./assets/icons/sun.svg";
 import BaseLayout from "./layout/BaseLayout";
 import { Dashboard, PageNotFound } from "./screens";
+import FormTable from "./components/dashboard/areaTable/FormTable";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -26,11 +27,13 @@ function App() {
         <Routes>
           <Route element={<BaseLayout />}>
             <Route path="/" element={<Dashboard />} />
+            {/* <Route path="/table" element={<FormTable />} /> */}
+
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
 
-        <button
+        {/* <button
           type="button"
           className="theme-toggle-btn"
           onClick={toggleTheme}
@@ -39,7 +42,7 @@ function App() {
             className="theme-icon"
             src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
           />
-        </button>
+        </button> */}
       </Router>
     </>
   );

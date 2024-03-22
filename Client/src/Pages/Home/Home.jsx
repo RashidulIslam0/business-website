@@ -5,6 +5,7 @@ import Services from "../../Components/Services/Services";
 import Videoall from "../../Components/Video/Videoall";
 import Count from "../../Components/Count/Count";
 import { Link } from "react-router-dom";
+import VideoSection from "../../Components/Video/Video";
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
         buttonLink="/book"
         buttonText="Book A Call"
       />
-      <Videoall />
+      <VideoSection />
 
       <Count />
 

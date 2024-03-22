@@ -57,6 +57,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bookRoutes = require('./routes/BookRoutes');
 const videoRoutes = require('./routes/VideoRoutes');
+const formRoutes = require('./routes/formRoutes');
+
 
 
 const app = express();
@@ -83,6 +85,8 @@ const connectDB = async () => {
 
 app.use('/books',bookRoutes);
 app.use('/api/v1/video',videoRoutes);
+app.use('/api/v1/form',formRoutes);
+
 
 
 
